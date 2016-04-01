@@ -1,7 +1,7 @@
 FROM postgres:9.4
 
-ENV POSTGRES_USER ptitbob
-ENV POSTGRES_PASSWORD carpoi
-ENV POSTGRES_DB docker
+ENV POSTGRES_USER data
+ENV POSTGRES_PASSWORD data
+ENV POSTGRES_DB postgres
 
 ADD sql/*.sql /docker-entrypoint-initdb.d/

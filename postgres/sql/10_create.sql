@@ -1,7 +1,3 @@
-create schema data authorization ptitbob;
-
-set search_path to data, public;
-
 create table person (
 	id	bigint not null,
 	name	varchar(100),
