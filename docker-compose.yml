@@ -1,0 +1,17 @@
+postgres:
+  container_name: postgres
+  build: postgres/
+  ports:
+    - 5432:5432
+
+phpPgAdmin:
+  container_name: phppgadmin
+  image: fizix/docker-pgadmin:php-fpm-environment
+  environment:
+    - POSTGRESQL_HOST=postgres
+    - POSTGRESQL_PORT=5432
+    - POSTGRESQL_DEFAULT_DB=postgres
+  ports:
+    - 80:80
+  links:
+    - postgres
