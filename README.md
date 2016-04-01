@@ -30,9 +30,9 @@ docker run -e POSTGRES_USER=docker -e POSTGRES_PASSWORD=docker -e POSTGRES_DB=do
 ou directement dans le Dockerfile
 
 ```shell
-ENV POSTGRES_USER ptitbob
-ENV POSTGRES_PASSWORD carpoi
-ENV POSTGRES_DB docker
+ENV POSTGRES_USER data
+ENV POSTGRES_PASSWORD data
+ENV POSTGRES_DB postgres
 ```
 
 C'est valable depuis le 8 juillet 2015.
