@@ -4,11 +4,11 @@
 
 ***But*** : Création d'un container avec initialisaton d'une base de donnée posgreSQL 
 
-* [ ] création de l'image
-* [x] Utilisateur
-* [x] databse
-* [x] création de structure
-* [ ] alimentation partielle
+* création de l'image
+* Utilisateur
+* databse
+* création de structure
+* alimentation partielle
 
 --
 ####*Rappels*
@@ -24,7 +24,7 @@ executer le container : ```docker run -p 5432:5432 shipstone/postgres```
 en ligne de commande : 
 
 ```shell
-docker run -e POSTGRES_USER=docker -e POSTGRES_PASSWORD=docker -e POSTGRES_DB=docker library/postgres
+docker run -e POSTGRES_USER=data -e POSTGRES_PASSWORD=data -e POSTGRES_DB=postgres library/postgres
 ```
 
 ou directement dans le Dockerfile
@@ -48,4 +48,14 @@ Exemple de copie :
 ```
 ADD sql/*.sql /docker-entrypoint-initdb.d/
 ```
+
+--
+
+###Création image phpPgAdmin
+
+basé sur : 
+
+* distri alpine
+* nginx
+* phpPgAdmin
 
