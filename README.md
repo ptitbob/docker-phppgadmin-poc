@@ -2,6 +2,13 @@
 
 --
 
+>##But
+>
+>Création d'un container presentant phpPgAdmin et laissant la possibilité de linker plusieurs container postgreSQL afin de proposer une admin de base. Peut être utile pour le prototypage (POC) ou préparation de support de cours / stage.
+
+
+---
+
 >####*Rappels*
 >
 >création d'image : ```docker build -t shipstone/postgres .```
