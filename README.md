@@ -2,6 +2,16 @@
 
 --
 
+>####*Rappels*
+>
+>création d'image : ```docker build -t shipstone/postgres .```
+>
+>executer le container : ```docker run -p 5432:5432 shipstone/postgres```
+
+
+
+##Image postgres
+
 ***But*** : Création d'un container avec initialisaton d'une base de donnée posgreSQL 
 
 * création de l'image
@@ -9,15 +19,6 @@
 * databse
 * création de structure
 * alimentation partielle
-
---
-####*Rappels*
-
-création d'image : ```docker build -t shipstone/postgres .```
-
-executer le container : ```docker run -p 5432:5432 shipstone/postgres```
-
---
 
 ###Création utilisateur
 
@@ -35,9 +36,7 @@ ENV POSTGRES_PASSWORD data
 ENV POSTGRES_DB postgres
 ```
 
-C'est valable depuis le 8 juillet 2015.
-
---
+*C'est valable depuis le 8 juillet 2015.*
 
 ###Création structure
 
@@ -49,13 +48,20 @@ Exemple de copie :
 ADD sql/*.sql /docker-entrypoint-initdb.d/
 ```
 
---
+##Image phpPgAdmin
 
-###Création image phpPgAdmin
+###Utilisation image issu du ```hub.docker```
+
+Utilisation de l'image : [fizix/docker-pgadmin](https://hub.docker.com/r/fizix/docker-pgadmin/) - un peu limité (une liaison seulement)
+
+###Création image phpPgAdmin légère
 
 basé sur : 
 
-* distri alpine
+* distri alpine [nimmis/alpine-micro](https://hub.docker.com/r/nimmis/alpine-micro/)
+    * doc : [docker-alpine/docs](https://github.com/gliderlabs/docker-alpine/blob/master/docs/usage.md)
 * nginx
-* phpPgAdmin
+    * exemple : [github.com :: oren/alpine-nginx](https://github.com/oren/alpine-nginx)
+    * 
+* phpPgAdmin 
 

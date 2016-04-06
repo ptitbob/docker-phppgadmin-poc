@@ -4,6 +4,12 @@ postgres:
   ports:
     - 5432:5432
 
+postres2:
+  container_name: postgres2
+  build: postgres2/
+  ports:
+    - 5433:5432
+
 phpPgAdmin:
   container_name: phppgadmin
   image: fizix/docker-pgadmin:php-fpm-environment
@@ -15,3 +21,4 @@ phpPgAdmin:
     - 80:80
   links:
     - postgres
+
